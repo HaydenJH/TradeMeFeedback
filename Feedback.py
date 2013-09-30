@@ -35,7 +35,7 @@ def getNegativeFeedback(links):
  				f = i.parent.parent.findPreviousSibling("tr")
  				if(SAD_FACE in f.prettify()):
  					feedbackCount += 1
-
+ 					#this is all a bit fiddly and would need to be changed if trademe updated
  					criticName = "Name of user complaining: " + f.b.string
  					userWasBuyerOrSeller = f.div.string
  					negativeFeedback = f.findNextSibling("tr").div.string.replace("&nbsp;","")
@@ -54,9 +54,9 @@ def getNegativeFeedback(links):
 
 
 #Constants for locating data in the webpage sourcecode
-HAPPY_FACE = "/images/happy_face1.gif"
+#HAPPY_FACE = "/images/happy_face1.gif"
 SAD_FACE = "/images/sad_face1.gif"
-NEUTRAL_FACE = "/images/neutral_face1.gif"
+#NEUTRAL_FACE = "/images/neutral_face1.gif"
 BASE_URL = "http://www.trademe.co.nz/Members/"
 linkList = []
 
